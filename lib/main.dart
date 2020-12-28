@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:github_profile_starter_kit/app/routes/app_routes.dart';
 import 'package:github_profile_starter_kit/ui/screens/home_page.dart';
 
 void main() {
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomeScreen(),
+      initialRoute: AppRoutes.home,
+      onGenerateRoute: AppRoutes.onGenerateRoute,
     );
   }
 }
