@@ -9,4 +9,6 @@ class Endpoints {
 
   // connectTimeout
   static const int connectionTimeout = 10000;
+  static const String usersProfile = '/users';
+  static const String repos = 'repos';
 }
