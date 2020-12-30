@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:github_profile_starter_kit/notifier/user_provider.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key key}) : super(key: key);
@@ -6,6 +8,15 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final userNameController = TextEditingController();
+
+    final model = context.watch<UserProvider>();
+
+    Future<void> fetchUserInfo() async {
+      await context
+          .read<UserProvider>()
+          .getUser(username: userNameController.text, ctx: context);
+    }
+
     return Scaffold(
       backgroundColor: Colors.black,
       body: Column(
@@ -49,10 +60,18 @@ class HomeScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text('Get my Github Profile'),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    model.isLoading
+                        ? CircularProgressIndicator(
+                            backgroundColor: Colors.white,
+                          )
+                        : const SizedBox.shrink()
                   ],
                 ),
               ),
-              onPressed: () {},
+              onPressed: () => fetchUserInfo(),
             ),
           )
         ],
