@@ -1,7 +1,9 @@
 import 'package:flutter/widgets.dart';
+import 'package:github_profile_starter_kit/app/data/exceptions.dart';
 import 'package:github_profile_starter_kit/app/data/models/user_profile.dart';
 import 'package:github_profile_starter_kit/app/data/services/github_api.dart';
 import 'package:github_profile_starter_kit/app/routes/app_routes.dart';
+import 'package:github_profile_starter_kit/ui/widgets/show_custom_dialog.dart';
 
 class UserProvider extends ChangeNotifier {
   GithubApi _githubApi = GithubApi();
@@ -26,7 +28,8 @@ class UserProvider extends ChangeNotifier {
       setLoading(false);
       Navigator.of(ctx).pushNamed(AppRoutes.user_details);
     } catch (e) {
-      print(e);
+      final errorMessage = DioExceptions.fromDioError(e).toString();
+      showCustomDialog(ctx, 'Error', errorMessage);
       setLoading(false);
     }
   }
