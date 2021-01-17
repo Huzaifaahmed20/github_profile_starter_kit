@@ -15,6 +15,9 @@ class HomeScreen extends StatelessWidget {
       await context
           .read<UserProvider>()
           .getUser(username: userNameController.text, ctx: context);
+      await context
+          .read<UserProvider>()
+          .getUserRepos(username: userNameController.text, ctx: context);
     }
 
     return Scaffold(
