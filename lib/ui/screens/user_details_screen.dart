@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:github_profile_starter_kit/app/data/models/repos.dart';
+import 'package:github_profile_starter_kit/app/routes/app_routes.dart';
 import 'package:github_profile_starter_kit/notifier/user_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -68,23 +69,29 @@ class UserDetailsScreen extends StatelessWidget {
               crossAxisSpacing: 10,
               mainAxisSpacing: 10,
               children: reposInfo.map((item) {
-                return Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: Colors.grey,
+                return GestureDetector(
+                  onTap: () {
+                    Navigator.of(context)
+                        .pushNamed(AppRoutes.webview, arguments: item.html_url);
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: Colors.grey,
+                      ),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(12.0),
+                      ),
                     ),
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(12.0),
-                    ),
-                  ),
-                  child: Card(
-                    color: Colors.black,
-                    child: Center(
-                      child: Text(
-                        item.name,
-                        style: TextStyle(color: Colors.white),
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
+                    child: Card(
+                      color: Colors.black,
+                      child: Center(
+                        child: Text(
+                          item.name,
+                          style: TextStyle(color: Colors.white),
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
+                        ),
                       ),
                     ),
                   ),
