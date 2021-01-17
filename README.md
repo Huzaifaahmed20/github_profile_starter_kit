@@ -1,16 +1,19 @@
-# github_profile_starter_kit
+# Github Profile App
 
-A new Flutter project.
+This repos belongs to [Flutter Provider Series](https://www.youtube.com/watch?v=ZiwS2sTmQBA&list=PL4r_2P8lRxlg2eDizFXeiDhWYckwn5zqK) on my channel
 
-## Getting Started
+This repo has following branches (step by step code):
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  - episode-02-app-structure  (Turorial: https://www.youtube.com/watch?v=o6661CZKv94)
+  
+  - episode-03-design-screens (Turorial: https://www.youtube.com/watch?v=4zKyyh0zV3w)
+  
+  - episode-04-github-api-and-datamodels (Turorial: https://www.youtube.com/watch?v=hYzSxWTVwSc)
+  
+  - episode-05-connect-provider (Turorial: https://www.youtube.com/watch?v=_fu2UcAvH2A&)
+  
+  - episode-06-error-handling (Turorial: https://www.youtube.com/watch?v=KXZB4u2vAOw)
+  
+  - episode-07-show-user-repos (Turorial: )
+  
+  - episode-08-show-web-view (Turorial: )
