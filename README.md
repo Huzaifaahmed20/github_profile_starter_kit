@@ -14,6 +14,6 @@ This repo has following branches (step by step code):
   
   - episode-06-error-handling (Turorial: https://www.youtube.com/watch?v=KXZB4u2vAOw)
   
-  - episode-07-show-user-repos (Turorial: )
+  - episode-07-show-user-repos (Turorial: https://www.youtube.com/watch?v=2piJGyHCzOc)
   
-  - episode-08-show-web-view (Turorial: )
+  - episode-08-show-web-view (Turorial: https://www.youtube.com/watch?v=VHvue2K8a4I)
